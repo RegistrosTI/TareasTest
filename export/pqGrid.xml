@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="
+Planificador
+">
+<Table>
+<Column ss:AutoFitWidth="1"  ss:Width="50" />
+<Column ss:AutoFitWidth="1"  ss:Width="70" />
+<Column ss:AutoFitWidth="1"  ss:Width="50" />
+<Column ss:AutoFitWidth="1"  ss:Width="50" />
+<Column ss:AutoFitWidth="1"  ss:Width="60" />
+<Column ss:AutoFitWidth="1"  ss:Width="100" />
+<Column ss:AutoFitWidth="1"  ss:Width="80" />
+<Column ss:AutoFitWidth="1"  ss:Width="60" />
+<Column ss:AutoFitWidth="1"  ss:Width="80" />
+<Column ss:AutoFitWidth="1"  ss:Width="80" />
+<Column ss:AutoFitWidth="1"  ss:Width="100" />
+<Column ss:AutoFitWidth="1"  ss:Width="200" />
+<Column ss:AutoFitWidth="1"  ss:Width="150" />
+<Column ss:AutoFitWidth="1"  ss:Width="70" />
+<Column ss:AutoFitWidth="1"  ss:Width="60" />
+<Column ss:AutoFitWidth="1"  ss:Width="60" />
+<Column ss:AutoFitWidth="1"  ss:Width="60" />
+<Column ss:AutoFitWidth="1"  ss:Width="60" />
+<Column ss:AutoFitWidth="1"  ss:Width="60" />
+<Column ss:AutoFitWidth="1"  ss:Width="70" />
+<Column ss:AutoFitWidth="1"  ss:Width="200" />
+<Column ss:AutoFitWidth="1"  ss:Width="250" />
+<Row>
+<Cell><Data ss:Type="String">Id</Data></Cell>
+<Cell><Data ss:Type="String">Fecha</Data></Cell>
+<Cell><Data ss:Type="String">Año ISO</Data></Cell>
+<Cell><Data ss:Type="String">Mes</Data></Cell>
+<Cell><Data ss:Type="String">Semana ISO</Data></Cell>
+<Cell><Data ss:Type="String">Situación</Data></Cell>
+<Cell><Data ss:Type="String">Estado Tarea</Data></Cell>
+<Cell><Data ss:Type="String">Prioridad</Data></Cell>
+<Cell><Data ss:Type="String">Información de la Tarea</Data></Cell>
+<Cell><Data ss:Type="String">Planificación de la Tarea</Data></Cell>
+<Cell><Data ss:Type="String">Tarea</Data></Cell>
+<Cell><Data ss:Type="String">Título</Data></Cell>
+<Cell><Data ss:Type="String">Asignado A</Data></Cell>
+<Cell><Data ss:Type="String">Fecha Objetivo</Data></Cell>
+<Cell><Data ss:Type="String">Tiempo Estimado</Data></Cell>
+<Cell><Data ss:Type="String">Tiempo Fichado Día</Data></Cell>
+<Cell><Data ss:Type="String">Tiempo Fichado Semana</Data></Cell>
+<Cell><Data ss:Type="String">Tiempo Estimado Tarea</Data></Cell>
+<Cell><Data ss:Type="String">Tiempo Fichado Total</Data></Cell>
+<Cell><Data ss:Type="String">No Planificado</Data></Cell>
+<Cell><Data ss:Type="String">Observaciones</Data></Cell>
+<Cell><Data ss:Type="String">Comentario adicional</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[5247]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[05/10/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[10]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[41]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Pendiente]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[En Curso]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Normal]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[35875]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[INTRANET - COMUNICACIÓN CON EMPLEADOS]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Alberto Ruiz Iñigo]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[31/12/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[13.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[50.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[5278]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[05/10/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[10]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[41]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Pendiente]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Sin Iniciar]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Normal]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[35964]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[MATRICERÍA 4.0 - FASE 3]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Angeles Marín]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[31/12/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[20.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[100.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[5293]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[05/10/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[10]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[41]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Pendiente]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Cancelado]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Normal]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[35967]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[CMI DEPARTAMENTO CALIDAD]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Luis Barrachina]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[31/12/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[15.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[45.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[5299]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[05/10/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[10]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[41]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Pendiente]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Sin Iniciar]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Normal]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[35968]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[CMI DEPARTAMENTO RRHH]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Luis Barrachina]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[31/12/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[15.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[45.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[5274]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[05/10/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[10]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[41]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Pendiente]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Sin Iniciar]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Normal]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[undefined]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[35963]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[MATRICERÍA 4.0 - FASE 2]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Angeles Marín]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[31/10/2020]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[30.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[100.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[0.00]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

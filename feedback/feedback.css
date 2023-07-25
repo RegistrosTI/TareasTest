@@ -1,0 +1,131 @@
+.feedback {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -500px;
+    width: 1000px;
+    height: 600px;
+	box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+	display: none;
+	/*left: 50px; 
+	top: 250px;*/
+	background-color: #eae672;
+	color: #484747;
+	/*height: auto;
+	min-width: 600px;
+	width: 900px;*/
+	font-size: 12px;
+	text-align: left;
+	border:1px solid #E8E8E8;
+	border-radius: 0px;
+	padding: 10px;
+	font-weight: bold;
+	font-family: "Open Sans", Arial;
+	z-index: 2;
+}
+
+.feedback_menos_imagen {
+	width: 10px;
+	float: left;
+	cursor: pointer;
+}
+
+.feedback_mas_imagen {
+	width: 16px;
+	cursor: pointer;
+}
+
+.feedback_bloque {
+	margin-top: 5px;
+}
+
+.feedback_confirmar {
+	margin-top: 10px;
+}
+
+.feedback_confirmar_imagen {
+	/*width: 100px;*/
+	cursor: pointer;
+}
+
+.feedback_textarea {
+	width: 100%;
+}
+
+.feedback_destinatarios {
+	font-size: 9px;
+}
+
+.feedback_fechas {
+	font-size: 9px;
+}
+
+.init_feedback {
+	cursor: pointer;
+	float: left;
+	padding: 10px;
+}
+
+.init_feedback:hover {
+	color: #B98E00;
+}
+
+.boton_feedback {
+	border: 1px solid rgb(175, 152, 159);
+	background: linear-gradient(rgb(221, 221, 193), rgb(245, 245, 220)) repeat scroll 0% 0% transparent;
+	text-align: center;
+	color: #3E3E3E;
+	font-size: 10px;
+	border-radius: 5px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.feedback_boton {
+	width: 30px;
+	cursor: pointer;
+}
+
+.img_treefolder {
+	float: left;
+}
+
+.input_feedback {
+	width: 600px;
+}
+
+.feedback_lista {
+	clear: both;
+}
+
+.feedback_cerrar {
+	background-image: url('../imagenes/close_black.png');
+	background-repeat: no-repeat;
+	height: 20px;
+	z-index: 900902;
+	background-size: 20px 20px;
+	width: 32px;
+	cursor: pointer;
+	float: right;
+}
+
+.feedback_mas {
+	background-image: url('../imagenes/more.png');
+	background-repeat: no-repeat;
+	height: 40px;
+	z-index: 900902;
+	background-size: 20px 20px;
+	width: 32px;
+	cursor: pointer;
+	float: right;
+	margin-top: 10px;
+}
+
+.feedback_resultado {
+	clear: both;
+}
+
+.feedback_resultado_mas {
+	clear: both;
+}

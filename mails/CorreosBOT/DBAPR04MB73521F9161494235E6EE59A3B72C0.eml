@@ -1,0 +1,70 @@
+MIME-Version: 1.0
+Received: from DB7PR04MB4300.eurprd04.prod.outlook.com (2603:10a6:6:29::17) by
+ DB3PR0402MB3899.eurprd04.prod.outlook.com with HTTPS via
+ DB6P193CA0007.EURP193.PROD.OUTLOOK.COM; Thu, 3 Sep 2020 13:12:20 +0000
+Received: from DBAPR04MB7352.eurprd04.prod.outlook.com (2603:10a6:10:1a8::14)
+ by DB7PR04MB4300.eurprd04.prod.outlook.com (2603:10a6:5:28::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3348.15; Thu, 3 Sep
+ 2020 13:12:18 +0000
+Received: from DBAPR04MB7352.eurprd04.prod.outlook.com
+ ([fe80::491e:e048:b283:f91b]) by DBAPR04MB7352.eurprd04.prod.outlook.com
+ ([fe80::491e:e048:b283:f91b%7]) with mapi id 15.20.3348.015; Thu, 3 Sep 2020
+ 13:12:18 +0000
+From: =?iso-8859-1?Q?Angeles_Mar=EDn?= <angeles.marin@sp-berner.com>
+To: soporte ti <soporte.ti@sp-berner.com>
+Subject: PRUEBAMAPEX
+Thread-Topic: PRUEBAMAPEX
+Thread-Index: AdaB88uxisGnMLTjQ6yi6OMbY8vMVQ==
+Date: Thu, 3 Sep 2020 15:12:18 +0200
+Message-ID:
+	<DBAPR04MB73521F9161494235E6EE59A3B72C0@DBAPR04MB7352.eurprd04.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: es-ES
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: DBAPR04MB7352.eurprd04.prod.outlook.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	417f48c1-5fd7-47b6-f536-08d8500afc76
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+authentication-results: sp-berner.com; dkim=none (message not signed)
+ header.d=none;sp-berner.com; dmarc=none action=none
+ header.from=sp-berner.com;
+x-originating-ip: [77.231.124.164]
+x-ms-office365-filtering-correlation-id: 417f48c1-5fd7-47b6-f536-08d8500afc76
+x-ms-traffictypediagnostic: DB7PR04MB4300:
+x-ms-oob-tlc-oobclassifiers: OLM:1728;
+x-ms-exchange-antispam-messagedata:
+	7zpfVuHVuLMkQbkgVwKQidD00oQFa1oVKTkatSId7qrIgOw64FTVdHgaaBxiJgIHLuxHrW7Uxso8NXyQ1KF3IR5yy178X512AJZu/F/msB13o/yMyWPVj45vqD7eQsh1KKXS1DTLOyEtUk0srXR/kyxMsfKSbeB1r4ap6PYLLNCEbqcvBUwbKihbi9TtX2axR+ZAbA43LHTR4nNH2RZmvpjuRuJnXYdIaeWVi7M6oduTZMlCWrJnyk7uk4PWB0bixlnMfHbSVoPr1JekWbhvaSIrH5Ko0xo0i6Q8fhGJRK5RWfgcMzj1OpJRP41e1gkM2vr7jSKLpGr5d7/JHL0iStymzKlw7Vnb82KXkirbwsTpdmVLrlSaxrycoE0IN0CQH8gfjk5mN7WAt141wq6Fs5bLlp4x4tP0h7NIG7dP594vYJ6AV4aG6Dfk39+ndyo3sLNkO7ATiWX6zw4C2FpggSVBmzvjS6YM6/5JuAsL6KojZZo568Y+cZD39Ck4ntvTLI+Cac2CFZlF4z73BvigkRjlNHjfV3TKaP56Wk0fVM1tWZuHZ2iieuAep4MluFbMrncQpTsWGpm5UgRsy3yKDFgEkdaG8e1il3+wjniF54qFZLsqTZWbmdaC9lkfiCdYHvHXmKK2xWzv0XuZ8d1QMQ==
+x-ms-exchange-transport-crosstenantheadersstamped: DB7PR04MB4300
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:es;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:DBAPR04MB7352.eurprd04.prod.outlook.com;PTR:;CAT:NONE;SFS:;DIR:INB;
+x-microsoft-antispam: BCL:0;
+x-ms-exchange-crosstenant-originalarrivaltime: 03 Sep 2020 13:12:18.6772 (UTC)
+x-ms-exchange-crosstenant-network-message-id:
+	417f48c1-5fd7-47b6-f536-08d8500afc76
+x-ms-exchange-crosstenant-id: 87375e02-5221-41ac-9db6-9949c490f072
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	BGj2Qrvrb9JBY46Vzs6mQhPPLUvAg5IGffFWc5xnjfVOTE/Pq/Whb+gYIjWLmUKc8B8kLL9w+lgrgaHXr5eAaxBHTQnkTCodKBUcV/8CgeE=
+x-ms-exchange-transport-endtoendlatency: 00:00:01.5351785
+x-ms-exchange-processed-by-bccfoldering: 15.20.3326.025
+x-ms-exchange-crosstenant-authsource: DBAPR04MB7352.eurprd04.prod.outlook.com
+x-ms-exchange-crosstenant-authas: Internal
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750128)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	4jNO9zMEgZwnPW6tExgUwJfnMsxX4af+12f3g2J0lV64vVQuHGdTTwe+G4a5XUbmyH93Qwq/PAl38k4BCBlZo2U23T+eyBNFY8qFaWPdJdWkrUH1mlTleeNsx7sNtu4pYp6CpTQjWNO/DpajCu1+5wcs8CXHuJ7Biknz+5OrTZY3tfmOKSx3t+Zf6+XywM14Nd5ved7fpum1AfsXft1ts6/PBViasD5byAC0IqvXqrKcg8Z7tuLJuAAVnXROmzf3VAokz2lJMCej2NwA3pncTkjHJ8ji5YmYWNwGD3ndSJ3qYLuHNFvd+Ey3b1b2j6mnbQNVYXYRgbHdDPvTb1eRQuWuENGeIbrjG+NAutwwaA8=
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+PruebaMAPEX
+
+
+FIRMAMAPEX

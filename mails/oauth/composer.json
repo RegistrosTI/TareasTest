@@ -1,0 +1,9 @@
+{
+    "require": {
+        "javanile/php-imap2": "^0.1.10",
+        "webklex/php-imap": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {"App\\": "App/"}
+    }
+}

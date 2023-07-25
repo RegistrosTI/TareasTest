@@ -1,0 +1,326 @@
+Received: from DB8PR04MB6842.eurprd04.prod.outlook.com (2603:10a6:10:11c::21)
+ by DB9PR04MB8220.eurprd04.prod.outlook.com with HTTPS; Tue, 13 Jun 2023
+ 10:02:41 +0000
+Received: from AM8PR04MB7780.eurprd04.prod.outlook.com (2603:10a6:20b:24c::12)
+ by DB8PR04MB6842.eurprd04.prod.outlook.com (2603:10a6:10:11c::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6477.29; Tue, 13 Jun
+ 2023 10:02:40 +0000
+Received: from AM8PR04MB7780.eurprd04.prod.outlook.com
+ ([fe80::54ef:5fe7:1af6:5ebe]) by AM8PR04MB7780.eurprd04.prod.outlook.com
+ ([fe80::54ef:5fe7:1af6:5ebe%4]) with mapi id 15.20.6477.028; Tue, 13 Jun 2023
+ 10:02:39 +0000
+From: Herman Martinez <herman.martinez@sp-berner.com>
+To: soporte ti <soporte.ti@sp-berner.com>
+Subject: soporte 12
+Thread-Topic: soporte 12
+Thread-Index: Admd3ikFWB8N0KYkSHKMPw8zeWX/Kw==
+Date: Tue, 13 Jun 2023 10:02:39 +0000
+Message-ID:
+	<AM8PR04MB77803045FEBF88BCD84E1C49B655A@AM8PR04MB7780.eurprd04.prod.outlook.com>
+Accept-Language: es-ES, en-US
+Content-Language: es-ES
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: AM8PR04MB7780.eurprd04.prod.outlook.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	cddbd277-2eba-4a95-c756-08db6bf55278
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=sp-berner.com;
+x-ms-office365-filtering-correlation-id: cddbd277-2eba-4a95-c756-08db6bf55278
+x-ms-traffictypediagnostic:
+	AM8PR04MB7780:EE_|DB8PR04MB6842:EE_|DB9PR04MB8220:EE_
+x-ms-exchange-transport-crosstenantheadersstamped: DB8PR04MB6842
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:es;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:AM8PR04MB7780.eurprd04.prod.outlook.com;PTR:;CAT:NONE;SFS:;DIR:INT;
+x-microsoft-antispam: BCL:0;
+x-ms-exchange-crosstenant-originalarrivaltime: 13 Jun 2023 10:02:39.7820 (UTC)
+x-ms-exchange-crosstenant-network-message-id:
+	cddbd277-2eba-4a95-c756-08db6bf55278
+x-ms-exchange-crosstenant-id: 87375e02-5221-41ac-9db6-9949c490f072
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	LXKlNcI4xaN6uztjUVL4I5PEQ4VTJExGmUqD1UV6LrMWKu3ZdTi0PMVxYGhBokxm5ic9PB4DVSfVpIfMTSj+92XFzRfEfIM307PMjo1qRAY=
+x-ms-exchange-transport-endtoendlatency: 00:00:01.6766872
+x-ms-exchange-processed-by-bccfoldering: 15.20.6455.026
+x-ms-exchange-crosstenant-authsource: AM8PR04MB7780.eurprd04.prod.outlook.com
+x-ms-exchange-crosstenant-authas: Internal
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	NEivi8YQAfvfyii5Di0DaszZnMWakTHjrYgwQc7t1CNXBmi97F0LxBBjGCCBIRM5M13pT1fshtZOECs6+p4FCJqglGuCABHswtIyAHDQh5fZpIYSIbYuPGImFnZ82KXgZOe6ff+JlON7dh3q6u2OBRBDBY4s9mYaYGzG21QDyeLEepLpcQidyf8MpaKK0eaX3gdHB07TwPekXFwikSjsvuV2/hIEQTkyLbCO2cJx/GZ49sWts/xO39JKpxP5IxPnrdrzsxseiR7wlHu0ou4KqSWxCy6uuwCMO2YsnKhILRIMiDLmB6bg9ogGBkVMd+9HBxG7sFwQ43eIo1NxnfkvbBwuhuXXwzv4i9EppkOV/tkpvrflIbBgWGYTJezTOu+8DT/6/WEEmYUn8YmvrfWqTPJCsEQBFgsEWli+0D9sK6nSYjX8s+HKB41kz1qeKty+mQgTKmxI4e/0qM9n8YG51wDW35kxt85tCyYhI9WHrIjpjtkRMLB7EhqmYKWv3lV3p7HLznngx8CezXvqlZju+x/+kPmpdOxD7ThIJ0q0wyJGfIwjDni5IfCBBfwB0stLyANWKFkOah/iGgewbpxWH20XW10JDtkKsJeuLCSriShu5bsoQ2ShOIKcl8Rr0JK4dwwZ5FKuPROkVSgyODOjebkYhD/bggkqLScbP6Rj2e71O64Z5/FSADnWH1o3Ztx+pHarKd0F4CNlVrbjVJNYzg3wL1nTMN1XqMbABKpMLGNIEh0RVhNt41pCc7vt3wXLD1nROL1rjsvFf6o3MuqDz3a2sTEjTxf7ViGJ9UDORgI=
+Content-Type: multipart/alternative;
+	boundary="_000_AM8PR04MB77803045FEBF88BCD84E1C49B655AAM8PR04MB7780eurp_"
+MIME-Version: 1.0
+
+--_000_AM8PR04MB77803045FEBF88BCD84E1C49B655AAM8PR04MB7780eurp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Soporte 12
+
+[sp-berner]<https://sp-berner.com/>
+PERSONAL CARE
+CLEANING SOLUTIONS
+KITCHENWARE
+CAMPOS COOLERS
+HOME STORAGE
+INDUSTRIAL
+POS ADVERTISING
+RECYCLED FURNITURE
+
+[Facebook]<https://www.facebook.com/SpBerner/>
+[Instagram]<https://www.instagram.com/spberner/>
+[Linkedin]<https://www.linkedin.com/company/sp-berner-plastic-group-s-l/?or=
+iginalSubdomain=3Des>
+[Youtube]<https://www.youtube.com/user/comunicacionspberner>
+sp-berner.com<https://sp-berner.com/>
+
+Herman Andres Martinez
+
+Programador Web Full-Stack
+Analista programador
+Despatamento Tecnolog=EDas de la Informaci=F3n
+
+T +34 96 159 60 06  ext. 2285
+
+
+
+
+--_000_AM8PR04MB77803045FEBF88BCD84E1C49B655AAM8PR04MB7780eurp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Open Sans";}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+span.EstiloCorreo17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-ligatures:none;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"ES" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:bre=
+ak-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Soporte 12<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"660" style=3D"width:495.0pt;border-collapse:collapse">
+<tbody>
+<tr>
+<td width=3D"330" valign=3D"top" style=3D"width:247.5pt;padding:0cm 0cm 0cm=
+ 0cm">
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100.0%;border-collapse:collapse">
+<tbody>
+<tr>
+<td style=3D"padding:0cm 7.5pt 0cm 7.5pt">
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100.0%;border-collapse:collapse">
+<tbody>
+<tr>
+<td style=3D"padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://sp-berner.com/" target=3D"_blank"=
+><span style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;c=
+olor:blue;mso-fareast-language:ES;text-decoration:none"><img border=3D"0" w=
+idth=3D"220" height=3D"80" style=3D"width:2.2916in;height:.8333in" id=3D"_x=
+0000_i1030" src=3D"https://sp-berner.com/wp-content/uploads/2022/09/logo-em=
+ail-spberner-2022-final.jpg" alt=3D"sp-berner"></span></a><span style=3D"fo=
+nt-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-languag=
+e:ES"><o:p></o:p></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100.0%;border-collapse:collapse">
+<tbody>
+<tr>
+<td style=3D"padding:0cm 0cm 15.0pt 0cm">
+<p class=3D"MsoNormal" style=3D"line-height:12.0pt;mso-line-height-rule:exa=
+ctly"><span lang=3D"EN-US" style=3D"font-size:7.0pt;font-family:&quot;Arial=
+&quot;,sans-serif;color:#888888;mso-fareast-language:ES">PERSONAL CARE<br>
+CLEANING SOLUTIONS<br>
+KITCHENWARE<br>
+CAMPOS COOLERS<o:p></o:p></span></p>
+</td>
+<td style=3D"padding:0cm 0cm 15.0pt 0cm">
+<p class=3D"MsoNormal" style=3D"line-height:12.0pt;mso-line-height-rule:exa=
+ctly"><span lang=3D"EN-US" style=3D"font-size:7.0pt;font-family:&quot;Arial=
+&quot;,sans-serif;color:#888888;mso-fareast-language:ES">HOME STORAGE<br>
+INDUSTRIAL<br>
+POS ADVERTISING<br>
+RECYCLED FURNITURE<o:p></o:p></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;display:none;mso-fareast-language:ES"><o:p>&nbsp;</o:p=
+></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100.0%;border-collapse:collapse">
+<tbody>
+<tr>
+<td style=3D"padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://www.facebook.com/SpBerner/"><span=
+ style=3D"color:blue;mso-fareast-language:ES;text-decoration:none"><img bor=
+der=3D"0" width=3D"30" height=3D"28" style=3D"width:.3125in;height:.2916in"=
+ id=3D"_x0000_i1029" src=3D"https://sp-berner.com/wp-content/uploads/2022/0=
+9/facebook.jpg" alt=3D"Facebook"></span></a><span style=3D"mso-fareast-lang=
+uage:ES"><o:p></o:p></span></p>
+</td>
+<td style=3D"padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://www.instagram.com/spberner/"><spa=
+n style=3D"color:blue;mso-fareast-language:ES;text-decoration:none"><img bo=
+rder=3D"0" width=3D"30" height=3D"28" style=3D"width:.3125in;height:.2916in=
+" id=3D"_x0000_i1028" src=3D"https://sp-berner.com/wp-content/uploads/2022/=
+09/instagram.jpg" alt=3D"Instagram"></span></a><span style=3D"mso-fareast-l=
+anguage:ES"><o:p></o:p></span></p>
+</td>
+<td style=3D"padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://www.linkedin.com/company/sp-berne=
+r-plastic-group-s-l/?originalSubdomain=3Des"><span style=3D"color:blue;mso-=
+fareast-language:ES;text-decoration:none"><img border=3D"0" width=3D"30" he=
+ight=3D"29" style=3D"width:.3125in;height:.302in" id=3D"_x0000_i1027" src=
+=3D"https://sp-berner.com/wp-content/uploads/2022/09/linkedin.jpg" alt=3D"L=
+inkedin"></span></a><span style=3D"mso-fareast-language:ES"><o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://www.youtube.com/user/comunicacion=
+spberner"><span style=3D"color:blue;mso-fareast-language:ES;text-decoration=
+:none"><img border=3D"0" width=3D"30" height=3D"28" style=3D"width:.3125in;=
+height:.2916in" id=3D"_x0000_i1026" src=3D"https://sp-berner.com/wp-content=
+/uploads/2022/09/youtube.jpg" alt=3D"Youtube"></span></a><span style=3D"mso=
+-fareast-language:ES"><o:p></o:p></span></p>
+</td>
+<td width=3D"50%" style=3D"width:50.0%;padding:0cm 0cm 0cm 11.25pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Op=
+en Sans&quot;,sans-serif;color:#999999;mso-fareast-language:ES"><a href=3D"=
+https://sp-berner.com/"><span style=3D"color:#999999">sp-berner.com</span><=
+/a>
+<o:p></o:p></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:ES"><o:p></o:p><=
+/span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"330" valign=3D"top" style=3D"width:247.5pt;padding:0cm 0cm 0cm=
+ 0cm">
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100.0%;border-collapse:collapse">
+<tbody>
+<tr>
+<td width=3D"1" style=3D"width:.75pt;background:#E4022C;padding:0cm 0cm 0cm=
+ 0cm">
+<p class=3D"MsoNormal"><span style=3D"color:black;mso-fareast-language:ES">=
+<img border=3D"0" width=3D"1" height=3D"100" style=3D"width:.0104in;height:=
+1.0416in" id=3D"_x0000_i1025" src=3D"https://sp-berner.com/wp-content/uploa=
+ds/2022/09/line-red.jpg" alt=3D"sp-berner"></span><span style=3D"mso-fareas=
+t-language:ES"><o:p></o:p></span></p>
+</td>
+<td style=3D"padding:11.25pt 11.25pt 11.25pt 11.25pt">
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100.0%;border-collapse:collapse">
+<tbody>
+<tr>
+<td style=3D"padding:7.5pt 7.5pt 7.5pt 7.5pt">
+<p class=3D"MsoNormal" style=3D"line-height:15.0pt;mso-line-height-rule:exa=
+ctly"><b><span style=3D"font-size:10.5pt;font-family:&quot;Open Sans&quot;,=
+sans-serif;color:black;mso-fareast-language:ES">Herman Andres Martinez
+</span></b><span style=3D"font-size:8.5pt;font-family:&quot;Open Sans&quot;=
+,sans-serif;color:#474545;mso-fareast-language:ES"><br>
+<br>
+</span><b><span style=3D"font-size:8.5pt;font-family:&quot;Open Sans&quot;,=
+sans-serif;color:#555555;mso-fareast-language:ES">Programador Web Full-Stac=
+k
+</span></b><span style=3D"font-size:8.5pt;font-family:&quot;Open Sans&quot;=
+,sans-serif;color:#474545;mso-fareast-language:ES"><br>
+Analista programador<br>
+</span><i><span style=3D"font-size:8.5pt;font-family:&quot;Open Sans&quot;,=
+sans-serif;color:#555555;mso-fareast-language:ES">Despatamento Tecnolog=EDa=
+s de la Informaci=F3n
+</span></i><span style=3D"font-size:8.5pt;font-family:&quot;Open Sans&quot;=
+,sans-serif;color:#474545;mso-fareast-language:ES"><br>
+<br>
+</span><span lang=3D"EN-US" style=3D"font-size:8.5pt;font-family:&quot;Open=
+ Sans&quot;,sans-serif;color:#474545;mso-fareast-language:ES">T +34 96 159 =
+60 06&nbsp; ext. 2285<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt;line-height:15.0pt;mso=
+-line-height-rule:exactly">
+<span style=3D"font-size:8.5pt;font-family:&quot;Open Sans&quot;,sans-serif=
+;color:#474545;mso-fareast-language:ES"><o:p>&nbsp;</o:p></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:ES"><o:p>&nbsp;<=
+/o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_AM8PR04MB77803045FEBF88BCD84E1C49B655AAM8PR04MB7780eurp_--

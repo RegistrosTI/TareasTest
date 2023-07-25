@@ -1,0 +1,479 @@
+.spb_gantt
+{
+	width: 100%;	
+}
+#ui-datepicker-div {
+  z-index: 10!important;
+}
+.spb_gantt_mensaje {
+	
+	display: none;	
+	background-color: rgba(102, 102, 102, 0.54);
+	color: #FFF;	
+	font-size: 12px;
+	text-align: left;
+	border: 0.1px solid #50504B;
+	border-radius: 3px;
+	padding: 10px;
+	font-weight: bold;	
+	font-family: "Open Sans",Arial;
+	position: absolute;
+	z-index: 10;	
+	min-height: 97%;
+}
+.spb_gantt_mensaje_cerrar 
+{
+    background-image: url("../gantt/image/close.png");
+    background-repeat: no-repeat;
+    height: 20px;
+    z-index: 10;
+    background-size: 20px 20px;
+    width: 32px;
+    cursor: pointer;
+    float: right;	
+}
+.spb_gantt_mensaje_resultado
+{
+	margin-top:32px;
+}
+.boton_lista_usuario
+{
+    border: 1px solid rgb(175, 152, 159);
+    background: linear-gradient(rgb(221, 221, 193), rgb(245, 245, 220)) repeat scroll 0% 0% transparent;
+    text-align: center;
+    color: #3E3E3E;
+    font-size: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+	cursor:pointer;
+}
+.Hoy
+{
+	color: red;
+}
+.lista_usuario
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.Nombre_Dia
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.TareasTimeLine
+{
+	position: relative;
+	float: left;
+	border-radius: 5px;
+}
+.detalle_servicio
+{
+	
+}
+.Tarea:hover {
+    box-shadow: 0px 0px 15px #4D4D4D;
+    border: solid 1px white;
+    z-index: 20;
+    height: 80px;
+	word-wrap: break-word;
+	color: white;
+	font-size: 20px;
+}
+.Tarea
+{
+	position: absolute;
+	height: 19px;
+	background: linear-gradient(#F00, #E90000) repeat scroll 0% 0% rgba(0, 0, 0, 0);
+	z-index	: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+	font-size:10px;
+}
+.TimeLine_Calendario
+{
+	position:relative;
+	overflow: auto;
+	
+}
+.Usuarios_Nombres
+{	
+	font-family: Arial;
+	font-size: 14px;	
+	
+}
+.Usuario
+{
+	height: 20px;
+	background-color: #F5F5DC;
+	padding-left: 10px;
+	font-weight: bold;
+	color: #5A5A5A;
+	font-size: 13px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.Servicio
+{
+	height: 20px;
+	font-size: 12px;
+	background-color: #F5F5DC;
+}
+.spb_gantt_calendario
+{
+	position: relative;
+	height: 100%;
+	overflow: auto;
+	margin: 0 auto;
+	width: 90%;
+	bottom: 0px;
+	top: 0px;
+	float: left;
+}
+
+
+
+
+.Hora_Dia
+{
+	position: absolute;	
+	height: 20px;
+	font-family: courier;
+	font-size: 12px;
+	color: rgba(197, 144, 52, 1);
+	background-color: rgba(242, 243, 232, 1);	
+}
+.Hora_Tarde
+{
+	position: absolute;	
+	height: 20px;
+	font-family: courier;
+	font-size: 12px;
+	color: rgba(197, 144, 52, 1);
+	background-color: rgba(233, 234, 219, 1);	
+}
+.fechas_detalle
+{
+	font-size: 10px;
+	border: solid 1px #B8B6B6;
+margin-left: 5px;
+margin-right: 5px;
+color: #B8B6B6;
+}
+.tarea_fechas_detalle
+{
+	width:80px;
+	font-size: 10px;
+	color: #B8B6B6;
+}
+.Usuarios_detalle_dia
+{
+	clear:both;
+	border: solid 1px #F5F5DC;
+}
+.Usuario_detalle_dia
+{
+	font-size: 11px;
+	float:left;
+
+}
+.vacaciones
+{
+	background-color: rgba(255, 0, 0, 0.56);
+}
+.Horas
+{
+	position: relative;
+	float: left;
+	top: 46px;	
+	height: 5px;
+}
+.Usuarios
+{
+	position: relative;
+	float: left;	
+	width: 10%;
+}
+.Usuarios_Hueco
+{
+	background-color: #F5F5DC;
+}
+.Boton
+{
+	float: left;
+	cursor: pointer;
+}
+.grid
+{
+	left: 0px;
+	position: absolute;
+	
+}
+
+
+.Meses
+{
+	position: relative;
+	float: left;	
+	z-index: 2;
+}
+.Mes
+{
+	position: absolute;		
+	color: #FEFFE6;
+	background-color: #5A5A5A;	
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;	
+	font-size: 14px;	
+	padding-left: 5px;
+	height: 20px;
+	top: 20px;
+}
+.Anyos
+{
+	position: relative;
+	font-size: 14px;	
+	font-weight: bold;
+	color: #FEFFE6;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;	
+	z-index: 2;
+}
+.Anyo
+{
+	float: left;
+	position: absolute;	
+	background-color: #5A5A5A;
+			
+	padding-left: 5px;
+	height: 20px;
+}
+.Dias
+{
+	position: relative;	
+	
+	height: 40px;	
+	font-family: courier;
+	padding-left: 1px;	
+	font-size: 12px;	
+	top: 45px;
+	z-index: 2;
+}
+.Dia
+{
+	position: absolute;	
+	float: left;
+	height:100%;
+	background-color: beige;
+}
+.Hora
+{
+	position: absolute;	
+	float: left;
+	height:100%;
+	background-color: beige;
+	z-index: 1;
+}
+.Controlador_mas
+{
+	background-color: transparent;
+	position: absolute;
+	width: 20px;
+	background-repeat: no-repeat;
+	overflow: visible;
+	z-index: 30;
+}
+
+.Controlador_mas:hover
+{
+	background-color: #5A5A5A;
+	cursor:pointer;
+	background-image: url("../gantt/image/mas.png");
+	background-position: center;
+}
+.Controlador_mas_beige
+{
+	background-color: transparent;
+	position: absolute;
+	width: 20px;
+	background-repeat: no-repeat;
+	overflow: visible;
+	z-index: 30;
+}
+.Controlador_mas_beige:hover
+{
+	background-color: beige;
+	cursor:pointer;
+	background-image: url("../gantt/image/mas.png");
+	background-position: center;
+	border: solid 1px #DDDDC1;
+}
+.Controlador_desplazar_next
+{
+	background-color: transparent;
+	position: absolute;
+	width: 20px;
+	background-repeat: no-repeat;
+	overflow: visible;
+	z-index: 30;
+}
+.Controlador_desplazar_next:hover
+{
+	background-color: rgba(0, 0, 0, 0.4);
+	cursor:pointer;
+	background-image: url("../gantt/image/next.png");
+	background-position: center;
+}
+.Controlador_desplazar_prev
+{
+	background-color: transparent;
+	position: absolute;
+	width: 20px;
+	background-repeat: no-repeat;
+	overflow: visible;
+	z-index: 30;
+}
+.Controlador_desplazar_prev:hover
+{
+	background-color: rgba(0, 0, 0, 0.4);
+	cursor:pointer;
+	background-image: url("../gantt/image/prev.png");
+	background-position: center;	
+}
+.Semanas
+{
+	position: relative;
+	float: left;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;	
+	font-size: 14px;	
+	padding-left: 5px;
+	height: 5px;
+	top: 40px;
+	z-index: 2;	
+}
+.Extra-d
+{
+    background-color: rgba(66, 66, 66, 0.33);
+    width: 20px;
+    float: right;
+    height: 19px;
+    background-image: url("../gantt/image/left.png");
+    background-position: center;
+    background-repeat: no-repeat;
+	z-index:30;
+}
+.mensaje {
+	box-shadow: 0px 0px 15px #000;
+	display: none;
+	z-index: 900799;
+	background: none repeat scroll 0% 0% rgba(90, 90, 90, 0.85);
+    text-shadow: 2px 2px rgba(90, 90, 90, 0.18);
+	color: white;
+	height: auto;
+	font-size: 12px;
+	text-align: left;
+	border: 0.1px solid #DDDDC1;
+	border-radius: 15px;
+	padding: 10px;
+	font-weight: bold;
+	
+	font-family: "Open Sans",Arial;
+	position: absolute;
+}
+.Extra-i
+{
+    background-color: rgba(66, 66, 66, 0.33);
+    width: 20px;
+    float: left;
+    height: 19px;
+    background-image: url("../gantt/image/right.png");
+    background-position: center;
+    background-repeat: no-repeat;
+	z-index:30;
+}
+.Semana
+{
+	position: absolute;	
+	height:100%;
+}
+.semana_par
+{
+	color: #FEFFE6;
+	background-color: #D2D2D2;;	
+}
+.semana_impar
+{
+	color: #FEFFE6;
+	background-color: #A2A2A2;	
+}
+.Ausencia
+{
+	position: absolute;
+	z-index	: 11;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.Ausencia:hover {
+    box-shadow: 0px 0px 15px #4D4D4D;
+    border: solid 1px black;
+    z-index: 12;
+    
+}
+.global
+{
+	background-color:  #7B7777;
+}
+.particular
+{
+	background: repeating-linear-gradient(45deg, #666, #757575 10px, rgba(180, 180, 180, 0.6) 10px, rgba(146, 143, 143, 0.64) 20px) repeat scroll 0% 0% transparent;
+}
+.Fiesta
+{
+	color: #989898;
+	background-color: #DDDDC1;	
+}
+.Hora_Fiesta
+{
+	position: absolute;	
+	font-family: courier;
+	font-size: 12px;
+	color: #7B7777;
+	background-color: #DADADA;
+}
+.par
+{
+	background-color: rgba(210, 210, 210, 0.11);
+}
+.impar
+{
+	background-color: rgba(83, 83, 83, 0.11);
+}
+.Usuario_detalle
+{
+	width: 180px;
+	clear: both;
+}
+.detalle_horas_dia
+{
+		width: 80px;
+}
+.detalle_horas
+{
+		width: 80px;
+}
+.detalle_sobrecarga
+{
+		width: 80px;
+}
+.titulo_detalle
+{
+color: #5A5A5A;
+background: linear-gradient(#DDDDC1, #F5F5DC) repeat scroll 0% 0% transparent;
+padding-top: 6px;
+padding-bottom: 6px;
+padding-left: 2px;
+}
+.sobrecarga_negativa
+{
+background-color: rgba(255, 0, 0, 0.56);
+}
