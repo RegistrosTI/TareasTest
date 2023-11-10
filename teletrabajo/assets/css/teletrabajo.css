@@ -1,0 +1,121 @@
+.input-block {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.label-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* label {
+    flex: 1;
+    margin-right: 10px;
+} */
+
+.teletrabajo-input, .teletrabajo-option, .teletrabajo-select {
+    flex: 2;
+    padding: 5px;
+    border: 1px solid #3f51b5;
+    border-radius: 3px;
+    width: 90%;
+    margin-bottom: 30px;
+    font-size: 12px;
+    height: 30px;
+}
+
+.teletrabajo-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.teletrabajo-table th,
+.teletrabajo-table td {
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: smaller;
+}
+
+.teletrabajo-option>option, .teletrabajo-select>select {
+    font-size: smaller;
+}
+
+.display {
+    display: none;
+    visibility: hidden;
+    font-size: smaller;
+}
+
+.greenbackcolor{
+    background-color: green;
+}
+.redbackcolor{
+    background-color: red;
+}
+.displayTableResults{
+    margin-bottom: 8px;
+    width: 100%;
+}
+.displayTableResults th, .displayTableResults td{
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 11px;
+}
+.displayTableResults th{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/* Adjust the styles for smaller screens (responsive) */
+@media screen and (max-width: 900px) {
+    .input-block {
+        padding: 10px;
+    }
+
+    .label-input-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    input, option, select {
+        flex: 1;
+        width: 100%;
+    }
+
+    .display {
+        display: inline;
+        visibility: visible;
+    }
+
+    table {
+        display: none;
+        visibility: hidden;
+    }
+
+    .green-square {
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type="button"] {
+        font-size: 24px;
+        color: white;
+        border: none;
+        background-color: green;
+        cursor: pointer;
+    }
+}

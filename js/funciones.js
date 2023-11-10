@@ -915,7 +915,6 @@ function Actualiza_Avisos() {
  * @date 01/03/2016, Alberto, se cambia toda la función para usar jquery y se separan todos los ocultamientos a función externa (ocultar_secciones) para evitar código duplicado dificil de mantener
  */
 function cambia_menu(id) {
-
     if ($("#formulario").data("changed")) {
         if (!confirm('Hay datos sin guardar, ¿salir de todos modos?')) {
             id = 0;
@@ -1044,6 +1043,10 @@ function cambia_menu(id) {
             $("#miseccionhorasenundia").css("display", "block");
             $("#cabecera_nueva_der").html("<h3>HORAS EN UN DÍA</h3>");
         }
+        if (id == 12) {
+            $("#miseccionteletrabajo").css("display", "block");
+            $("#cabecera_nueva_der").html("<h3>TELETRABAJO</h3>");
+        }
         if (id == 11) {
             $("#cabecera_nueva_der").html("<h3>ACCESOS DIRECTOS A TAREAS FRECUENTES</h3>");
             $("#miseccionprefijartareas").css("display", "block");
@@ -1165,6 +1168,8 @@ function ocultar_secciones() {
     $("#miseccionevaluacionesusuarios").css("display", "none");
     // miseccionentradacorreo
     $("#miseccionentradacorreo").css("display", "none");
+    // miseccionteletrabajo
+    $("#miseccionteletrabajo").css("display", "none");
 }
 
 function nuevo_menu_incidencia(id) {
@@ -4445,7 +4450,7 @@ function ver_fecha_comentarios(fecha) {
 }
 
 function ver_fecha_horas(fecha) {
-
+  
     if ($("#slide-semanal").hasClass('ui-dialog-content')) {
         $("#slide-semanal").dialog("close");
     }
@@ -4479,6 +4484,42 @@ function ver_fecha_horas(fecha) {
     // $grid_horas_en_un_dia.pqGrid("refreshDataAndView");
     CalculaTotalHoras(fecha);
 
+}
+
+function ver_fecha_horas_teletrabajo(){
+    //debugger;
+    if ($("#slide-semanal").hasClass('ui-dialog-content')) {
+        $("#slide-semanal").dialog("close");
+    }
+    let fecha = "27-07-2023";
+    // FECHA_HORA_SELECCIONADA = fecha;
+
+    cambia_menu(12);
+
+    jQuery('#fechacalculohorasenundia').datetimepicker({
+        datepicker: true,
+        timepicker: false,
+        format: 'd-m-Y',
+        weeks: true,
+        dayOfWeekStart: 1,
+    });
+    /*
+     new JsDatePick({
+     useMode: 2,
+     target: "fechacalculohorasenundia",
+     dateFormat: "%d-%m-%Y"
+     });*/
+
+    var mifecha = document.getElementById('fechacalculohorasenundia');
+    mifecha.value = fecha;
+
+    FECHA_HORA_SELECCIONADA = fecha;
+
+    // CargaGridHorasEnUnDia();
+    calcularLasHorasUnDia();
+
+    // $grid_horas_en_un_dia.pqGrid("refreshDataAndView");
+    CalculaTotalHoras(fecha);
 }
 
 function CalculaTotalHoras(fecha) {
@@ -6901,6 +6942,542 @@ function CargaGridPreguntasFeedback() {
     }
 
 // -- **************************************** GRID MAESTRO DE PREGUNTAS FEEDBACK
+}
+
+function CargaGridTeletrabajo() {
+
+    ID_HORA_SELECCIONADA = '-1';
+
+    // Ocultar campos de hora y fecha en usuarios que no deban ver horas en los fichajes
+    var ocultarCampo = false;
+    if (OcultarHoraGrids == 1) {
+        ocultarCampo = true;
+    }
+
+    var tipos = [];
+    $.ajax({
+        url: "select/getTiposHoras.php",
+        success: function (response) {
+            tipos = response.split(",");
+        }
+    });
+
+    var dateEditor = function (ui) {
+        var $cell = ui.$cell,
+                rowData = ui.rowData,
+                dataIndx = ui.dataIndx,
+                cls = ui.cls,
+                dc = $.trim(rowData[dataIndx]);
+        $cell.css('padding', '0');
+        var $inp = $("<input type='text' name='" + dataIndx + "' class='" + cls + " pq-date-editor' />").appendTo($cell).val(dc).datetimepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd/mm/yy",
+            onClose: function () {
+                $inp.focus();
+            }
+        });
+    }
+
+
+    var dateEditor2 = function (ui) {
+        var $cell = ui.$cell;
+        var dataIndx = ui.dataIndx;
+        var rowData = ui.rowData;
+        var cls = ui.cls;
+        var dc = $.trim(rowData[dataIndx]);
+        var input = $("<input type='text' name='" + dataIndx + "' class='" + cls + " pq-date-editor' autocomplete='off' />")
+                .appendTo($cell)
+                .val(dc).datetimepicker({
+            datepicker: true,
+            timepicker: true,
+            format: 'd/m/Y H:i:s',
+            minTime: '07:00:00',
+            weeks: false,
+            step: 15,
+            dayOfWeekStart: 1,
+        });
+    }
+
+    var obj = {
+        width: '100%',
+        height: '95%',
+        title: "Lista de fichadas",
+        hoverMode: 'row',
+        selectionModel: {
+            type: 'row'
+        },
+        editModel: {
+            clicksToEdit: 2,
+            saveKey: '13',
+            onSave: null
+        },
+        pageModel: {
+            type: 'remote',
+            rPP: 20,
+            strRpp: "{0}"
+        },
+        groupModel: {
+            dataIndx: ["Dia Inicio"],
+            collapsed: [false],
+            title: ["<b style='font-weight:bold;'>{0} ({1} Fichas)</b>", "{0} - {1}"],
+            dir: ["up"]
+        },
+        scrollModel: {
+            pace: 'fast',
+            autoFit: true,
+            theme: true
+        },
+        dataModel: {
+            sorting: "remote",
+            paging: "remote",
+            curPage: 1,
+            rPP: 20,
+            sortIndx: ["Hora"],
+            sortDir: ["up"],
+            location: "remote",
+            dataType: "JSON",
+            method: "GET",
+            rPPOptions: [5, 10, 20, 30, 40, 50],
+            url: "select/consultaHorasenundia.php?usuario=" + encodeURIComponent(usuariovalidado) + "&fecha=" + FECHA_HORA_SELECCIONADA,
+            getData: function (dataJSON, textStatus, jqXHR) {
+                var data = dataJSON.data;
+                ID_HORA_SELECCIONADA = '-1';
+                return {
+                    curPage: dataJSON.curPage,
+                    totalRecords: dataJSON.totalRecords,
+                    data: dataJSON.data
+                };
+            }
+        }
+    };
+
+    obj.colModel = [{
+            title: "Hora",
+            width: 50,
+            minWidth: 50,
+            maxWidth: 50,
+            dataType: "integer",
+            editable: false,
+            hidden: ocultarCampo,
+            dataIndx: "Hora"
+        },
+        {
+            title: "Numero",
+            width: 50,
+            minWidth: 50,
+            maxWidth: 50,
+            dataType: "integer",
+            editable: false,
+            hidden: true,
+            dataIndx: "Numero"
+        },
+        {
+            title: "Tarea",
+            width: 50,
+            minWidth: 50,
+            maxWidth: 50,
+            hidden: true,
+            dataType: "integer",
+            dataIndx: "Tarea",
+            validations: [{
+                    type: 'regexp',
+                    value: '[0-9]{6}',
+                    msg: 'La tarea no es correcta'
+                }]
+        },
+        {
+            title: "Tarea",
+            width: 130,
+            minWidth: 130,
+            maxWidth: 130,
+            dataType: "integer",
+            editable: true,
+            hidden: false,
+            dataIndx: "Tarea",
+            render: function (ui) {
+                var tarea = ui.rowData["Tarea"];
+                if (ui.rowData["Dia Fin"] == '') {
+                    return tarea + "&nbsp;&nbsp;<input type='button' value='Abrir' title='Abrir tarea " + tarea + "' onclick='cambia_menu(3);' style='width:40px;' /><img src='imagenes/play.png' onclick='ID_FICHADA_SELECCIONADA = " + ui.rowData["Numero"] + ";ID_SELECCIONADA=" + tarea + ";IniciarTarea();' title='Iniciar tarea " + tarea + "' style='width:18px;height:18px;cursor: pointer;' /><img src='imagenes/stop.png' onclick='PararTarea();' title='Parar tarea " + tarea + "' style='width:18px;height:18px;cursor: pointer;' />";
+                } else {
+                    return tarea + "&nbsp;&nbsp;<input type='button' value='Abrir' title='Abrir tarea " + tarea + "' onclick='cambia_menu(3);' style='width:40px;' /><img src='imagenes/play.png' onclick='ID_FICHADA_SELECCIONADA = " + ui.rowData["Numero"] + ";ID_SELECCIONADA=" + tarea + ";IniciarTarea();' title='Iniciar tarea " + tarea + "' style='width:18px;height:18px;cursor: pointer;' />";
+                }
+            }
+        },
+        {
+            title: "Departamento",
+            width: 80,
+            minWidth: 80,
+            maxWidth: 80,
+            dataType: "text",
+            dataIndx: "Oficina",
+            editable: false
+        },
+        {
+            title: "Titulo",
+            width: 250,
+            minWidth: 200,
+            maxWidth: 400,
+            dataType: "text",
+            editable: false,
+            dataIndx: "Titulo"
+        },
+        {
+            title: "Dia Inicio",
+            width: 80,
+            minWidth: 80,
+            maxWidth: 80,
+            dataType: "text",
+            dataIndx: "Dia Inicio",
+            editor: {
+                type: dateEditor2
+            },
+            validations: [{
+                    type: 'regexp',
+                    value: '[0-9]{2}/[0-9]{2}/[0-9]{4} [0-9]{2}:[0-9]{2}',
+                    msg: 'No en formato dd/mm/yyyy hh:mm '
+                }]
+        },
+        {
+            title: "Hora Inicio",
+            width: 70,
+            minWidth: 70,
+            maxWidth: 70,
+            dataType: "text",
+            editable: false,
+            hidden: ocultarCampo,
+            dataIndx: "Hora Inicio"
+        },
+        {
+            title: "Inicio",
+            width: 70,
+            minWidth: 70,
+            maxWidth: 70,
+            dataType: "text",
+            editable: false,
+            hidden: true,
+            dataIndx: "Inicio"
+        },
+        {
+            title: "Dia Fin",
+            width: 70,
+            minWidth: 70,
+            maxWidth: 70,
+            dataType: "text",
+            hidden: ocultarCampo,
+            dataIndx: "Dia Fin",
+            editor: {
+                type: dateEditor2
+            },
+            validations: [{
+                    type: 'regexp',
+                    value: '^$|[0-9]{2}/[0-9]{2}/[0-9]{4} [0-9]{2}:[0-9]{2}',
+                    msg: 'No en formato dd/mm/yyyy hh:mm '
+                }]
+        },
+        {
+            title: "Hora Fin",
+            width: 70,
+            minWidth: 70,
+            maxWidth: 70,
+            dataType: "text",
+            editable: false,
+            hidden: ocultarCampo,
+            dataIndx: "Hora Fin"
+        },
+        {
+            title: "Minutos",
+            width: 70,
+            minWidth: 70,
+            maxWidth: 70,
+            dataType: "integer",
+            editable: false,
+            dataIndx: "Minutos",
+            summary: {
+                type: ["sum"],
+                title: ["Total: {0}"]
+            }
+        },
+        {
+            title: "Usuario",
+            width: 100,
+            minWidth: 100,
+            maxWidth: 100,
+            dataType: "text",
+            editable: false,
+            dataIndx: "Usuario"
+        },
+        {
+            title: "Tipo",
+            width: 70,
+            minWidth: 70,
+            maxWidth: 70,
+            dataType: "text",
+            editable: true,
+            dataIndx: "Tipo",
+            editor: {
+                type: 'select',
+                options: function (ui) {
+                    // return tipos;
+                    var tarea = ui.rowData["Tarea"];
+                    return obtenerTiposHoras(tarea);
+                }
+            },
+            validations: [{
+                    type: 'minLen',
+                    value: 1,
+                    msg: "Required"
+                }]
+        },
+        {
+            title: "Estado",
+            width: 110,
+            dataType: "integer",
+            editable: false,
+            hidden: true,
+            dataIndx: "Estado"
+        },
+        {
+            title: "Teletrabajo",
+            width: 70,
+            minWidth: 70,
+            maxWidth: 70,
+            dataType: "text",
+            editable: true,
+            dataIndx: "Teletrabajo",
+            editor: {
+                type: 'select',
+                options: function (ui) {
+                    // return tipos;
+                    var tarea = ui.rowData["Teletrabajo"];
+                    return obtenerTiposTeletrabajo(tarea);
+                }
+            },
+            validations: [{
+                    type: 'minLen',
+                    value: 1,
+                }]
+        },
+        {
+            title: "Comentario",
+            minWidth: 300,
+            dataType: "text",
+            editable: true,
+            dataIndx: "Comentario"
+        }
+        
+    ];
+
+
+
+    obj.render = function (evt, obj) {
+        var $toolbar = $("<div class='pq-grid-toolbar pq-grid-toolbar-search'></div>").appendTo($(".pq-grid-top", this));
+
+        $("<label>&nbsp;&nbsp;Minutos:&nbsp;</label><input type='number' id='minutostareaundia'       name='minutostareaundia'      style='width:50px' value='0' min='1' step='1' />").appendTo($toolbar);
+        $("<label>&nbsp;&nbsp;Tarea:&nbsp;  </label><input type='text'   id='autocompletetareaundia'  name='autocompletetareaundia' style='width:600px' maxlength='400'  value='' placeholder='&nbsp;&nbsp;&nbsp;Indique número o descripción de la tarea para usar el buscador' class='ui-autocomplete-input' autocomplete='off' />").appendTo($toolbar);
+
+        $("#autocompletetareaundia").change(function () {
+            anadirFichada();
+        });
+
+        $("<span>Añadir Fichada</span>").appendTo($toolbar).button({
+            icons: {
+                primary: "ui-icon-plusthick"
+            }
+        }).click(function (evt) {
+            anadirFichada();
+        });
+
+        $("<span>Borrar Fichada</span>").appendTo($toolbar).button({
+            icons: {
+                primary: "ui-icon-minusthick"
+            }
+        }).click(function (evt) {
+            deleteRow();
+        });
+
+        $('#autocompletetareaundia').autocomplete({
+            type: 'post',
+            source: function (request, response) {
+                $.get("select/getTareaAutocomplete.php?nombreusuario=" + encodeURIComponent(nombreusuariovalidado), {
+                    buscar: request.term
+                }, function (data) {
+                    tags = data.split("|");
+                    response(tags);
+                });
+            }
+        });
+    };
+
+    obj.rowSelect = function (evt, obj) {
+        ID_SELECCIONADA = obj.rowData["Tarea"];
+        ID_HORA_SELECCIONADA = obj.rowData["Numero"];
+    };
+    obj.cellSelect = function (evt, obj) {
+        ID_SELECCIONADA = obj.rowData["Tarea"];
+        ID_HORA_SELECCIONADA = obj.rowData["Numero"];
+    };
+    obj.cellDblClick = function (evt, obj) {
+        ID_SELECCIONADA = obj.rowData["Tarea"];
+        ID_HORA_SELECCIONADA = obj.rowData["Numero"];
+        // cambia_menu(3);
+    };
+
+
+
+    $grid_horas_en_un_dia = $("#horasunundia_grid").pqGrid(obj);
+
+    $grid_horas_en_un_dia.pqGrid("option", "topVisible", true);
+    $grid_horas_en_un_dia.pqGrid("option", "showTitle", true);
+    $grid_horas_en_un_dia.pqGrid("option", "collapsible", false);
+    $grid_horas_en_un_dia.pqGrid("option", "columnBorders", true);
+    $grid_horas_en_un_dia.pqGrid("option", "rowBorders", true);
+    $grid_horas_en_un_dia.pqGrid("option", "oddRowsHighlight", true);
+    $grid_horas_en_un_dia.pqGrid("option", "numberCell", true);
+    // $grid_horas_en_un_dia.pqGrid("option", "freezeCols", 3);
+
+    $grid_horas_en_un_dia.on("pqgridcellsave", function (evt, ui) {
+
+        var target = document.getElementById('micuerpo');
+        var spinner = new Spinner(opts).spin(target);
+
+        var ID = ui.rowData["Numero"];
+        var TITULO = ui.rowData["Comentario"];
+        var DIA_INICIO = ui.rowData["Dia Inicio"];
+        var DIA_FIN = ui.rowData["Dia Fin"];
+        var HORA_INICIO = ui.rowData["Hora Inicio"];
+        var HORA_FIN = ui.rowData["Hora Fin"];
+        var TAREA_HORA = ui.rowData["Tarea"];
+        var TIPO = ui.rowData["Tipo"];
+        var TELETRABAJO = ui.rowData["Teletrabajo"];
+
+        TITULO = limpiarTextoOffice(TITULO);
+
+        var url = "select/modificarHorasTarea.php?Id=" + ID + "&diainicio=" + DIA_INICIO + "&diafin=" + DIA_FIN + "&horainicio=" + HORA_INICIO + "&horafin=" + HORA_FIN + "&Titulo=" + encodeURIComponent(TITULO) + "&Tipo=" + encodeURIComponent(TIPO) + "&usuario=" + encodeURIComponent(usuariovalidado) + "&teletrabajo=" + TELETRABAJO + "&tarea=" + TAREA_HORA ;
+
+        $.ajax({
+            url: url
+        }).done(function (data) {
+            if (data == 0) {
+                mensaje('Aviso de cambio de estado', 'La tarea número ' + TAREA_HORA + ' ha cambiado al estado <i><b>En Curso</b></i> al modificar la fichada.');
+            }
+            $grid_horas_en_un_dia.pqGrid("refreshDataAndView");
+            var mifecha = document.getElementById('fechacalculohorasenundia');
+            CalculaTotalHoras(mifecha.value);
+            spinner.stop( );
+        });
+        ID_HORA_SELECCIONADA = '-1';
+    });
+
+    /***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+     * @desc añade una fichada con una cantidad de minutos al final del dia
+     * @author alberto
+     * @date 12/09/2017
+     */
+    function anadirFichada() {
+        var enviar = true;
+        var dia = $('#fechacalculohorasenundia').val();
+        dia = dia.split('-');
+        dia = dia[2] + '-' + dia[1] + '-' + dia[0];
+        var minutos = $('#minutostareaundia').val();
+        var tarea = $('#autocompletetareaundia').val();
+        tarea = tarea.split(' - ');
+        tarea = tarea[0];
+
+        if (enviar && !esEntero(minutos)) {
+            mensaje('Minutos', 'El campo minutos no es correcto.');
+            enviar = false;
+        }
+
+        if (enviar && (minutos < 1 || minutos > 360)) {
+            mensaje('Minutos', 'El campo minutos debe estar entre 1 y 360 (6 horas)');
+            enviar = false;
+        }
+
+        if (enviar && !esEntero(tarea)) {
+            mensaje('Tarea', 'El campo tarea no es correcto');
+            enviar = false;
+        }
+
+        if (enviar) {
+
+            var target = document.getElementById('micuerpo');
+            var spinner = new Spinner(opts).spin(target);
+
+            var url = "select/anadirFichadaUnDia.php?minutos=" + minutos + "&tarea=" + tarea + "&dia=" + dia + "&usuario=" + encodeURIComponent(usuariovalidado);
+            $.ajax({
+                url: url
+            }).done(function (data) {
+
+                spinner.stop( );
+                if (data != '') {
+                    mensaje('Error', data, 'alert.png');
+                }
+
+                $grid_horas_en_un_dia.pqGrid("refreshDataAndView");
+                var mifecha = document.getElementById('fechacalculohorasenundia');
+                CalculaTotalHoras(mifecha.value);
+                $('#minutostareaundia').val('');
+                $('#autocompletetareaundia').val('');
+                crearslidesemanal(2);
+            });
+        }
+    }
+
+    function deleteRow() {
+        if (ID_HORA_SELECCIONADA == '-1') {
+            mensaje('Error', 'Selecciona una línea para borrar.');
+        } else {
+
+            var target = document.getElementById('micuerpo');
+            var spinner = new Spinner(opts).spin(target);
+
+            var url = "select/borrarHorasTarea.php?Id=" + ID_HORA_SELECCIONADA + "&usuario=" + encodeURIComponent(usuariovalidado) + "&tarea=" + ID_SELECCIONADA;
+            $.ajax({
+                url: url
+            }).done(function () {
+                spinner.stop( );
+                $grid_horas_en_un_dia.pqGrid("refreshDataAndView");
+                var mifecha = document.getElementById('fechacalculohorasenundia');
+                CalculaTotalHoras(mifecha.value);
+            });
+        }
+        crearslidesemanal(2);
+    }
+
+    $("#btn_calcular_horasenundia").click(function () {
+        var mifecha = document.getElementById('fechacalculohorasenundia');
+
+        FECHA_HORA_SELECCIONADA = mifecha.value;
+        calcularLasHorasUnDia();
+        return false;
+    });
+
+
+    function obtenerTiposHoras(tarea) {
+        var tipos = [];
+        $.ajax({
+            url: "select/getTiposTipos.php?tipo=1&id=" + tarea,
+            cache: false,
+            async: false,
+            success: function (response) {
+                tipos = response.split(",");
+            }
+        });
+
+        return tipos;
+    }
+
+    function obtenerTiposTeletrabajo(tarea) {
+        var tipos = ['SI', 'NO']
+        return tipos;
+    }
+
+
+    // SI EL GRID SOLO SE LANZA DESDE EL SLIDER DE HORAS, ESTO NO HACE FALTA Y OPTIMIZAMOS EL ARRANQUE INICIAL
+    // var url = "select/consultaHorasenundia.php?usuario=" + encodeURIComponent(usuariovalidado) + "&fecha=" + FECHA_HORA_SELECCIONADA;
+    // $grid_horas_en_un_dia.pqGrid("option", "dataModel.url", url);
+    // $grid_horas_en_un_dia.pqGrid("refreshDataAndView");
 }
 
 

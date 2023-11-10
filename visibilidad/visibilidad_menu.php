@@ -250,6 +250,14 @@ if ( BuscarOcultar ( ( 'Configuración' ) , $opciones_ocultar , $nombre ) == tru
 	echo '		<li class="botonAngular text_left" onClick="cambia_menu(7)"><img src="./imagenes/configuration.png" width="17" height="20">&nbsp;' . $nombre . '</li>    ';
 	echo '	</ul>';
 }
+//Añadido para teletrabajo 25/08/2023 (start)
+if ( MostrarOcultarTeletrabajo ( ( 'Teletrabajo' ) , $usuario , $nombre ) == true ) {
+	//$today = date_create("27-07-2023");
+	echo '	<ul class="nav" id="menu" style="width:140px;">  ';
+	echo '		<li class="botonAngular text_left" onClick="ver_fecha_horas_teletrabajo()"><img src="./imagenes/teletrabajo.png" width="17" height="20">&nbsp;' . $nombre . '</li>    ';
+	echo '	</ul>';
+}
+//Añadido para teletrabajo 25/08/2023 (end)
 echo '</div><!-- Fin Menu!-->';
 //die();
 DBClose ();

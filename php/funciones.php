@@ -19,6 +19,7 @@ function curPageName() {
 }
 function BuscarOcultar( $campo , $valores , &$nombre ) {
 	$nombre = /*utf8_decode*/ ( $campo );
+
 	foreach ( $valores as $valor ) {
 		
 		if ( $valor [ 'Campo' ] == /*utf8_decode*/ ( $campo ) ) {
@@ -34,6 +35,7 @@ function BuscarOcultar( $campo , $valores , &$nombre ) {
 }
 function BuscarOcultarUTF8( $campo , $valores , &$nombre ) {
 	$nombre = utf8_decode ( $campo );
+	
 	foreach ( $valores as $valor ) {
 		
 		if ( $valor [ 'Campo' ] == utf8_decode ( $campo ) ) {
@@ -107,5 +109,42 @@ function BuscarClase( $campo , $valores ) {
 		}
 	}
 	return '';
+}
+function MostrarOcultarTeletrabajo($campo, $usuario, &$nombre ){
+	$nombre = /*utf8_decode*/ ( $campo );
+
+   $query = " 
+              SELECT COUNT(Usuario) AS USERCOUNT FROM [dbo].[Teletrabajo_Usuarios] AS TU
+              LEFT JOIN [GestionIDM].[dbo].[LDAP] AS LDAP ON LDAP.sAMAccountName = TU.Usuario 
+			  WHERE Usuario = '$usuario' GROUP BY LDAP.NIF
+			  "; 
+   $query = iconv('UTF-8', 'ISO-8859-1', $query); //decode
+   $query = DBSelect ($query);
+   $countUser = iconv('ISO-8859-1', 'UTF-8', DBCampo($query, "USERCOUNT")); //encode
+
+   $query = " 
+              SELECT LDAP.NIF AS NIF FROM [GestionIDM].[dbo].[LDAP] AS LDAP 
+			  WHERE sAMAccountName = '$usuario' GROUP BY LDAP.NIF
+			  "; 
+   $query = iconv('UTF-8', 'ISO-8859-1', $query); //decode
+   $query = DBSelect ($query);
+   $nifUser =  iconv('ISO-8859-1', 'UTF-8', DBCampo($query, "NIF"));
+ 
+   $query = "
+			SELECT COUNT(EP.NIF) AS USERCOUNTNIFDEPT FROM [GestionIDM].[dbo].[EPSILON] AS EP 
+			INNER JOIN [GestionPDT].[dbo].[Teletrabajo_Departamentos] AS TD ON TD.Oficina = EP.Departamento
+			WHERE EP.NIF = '$nifUser' 
+            ";
+	$query = DBSelect ($query);
+	$countDpto = iconv('ISO-8859-1', 'UTF-8', DBCampo($query, "USERCOUNTNIFDEPT")); //encode		
+    DBFree($query);
+
+	if($countUser == 1 || $countDpto == 1){
+		$valRet = true;
+	}else{
+		$valRet = false;
+	}
+
+   return $valRet;
 }
 ?>

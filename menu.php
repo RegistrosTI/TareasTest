@@ -170,6 +170,7 @@ if ($test) {
 <script src="js/pantalla.js?v=<?php echo $versionPortal; ?>"></script>
 <script src="js/funciones.js?v=<?php echo $versionPortal; ?>"></script>
 <script src="js/shortcuts.js"></script>
+<!-- <script src="teletrabajo/assets/js/teletrabajo.js"></script> -->
 <script src="grid/control_grid.js?v=<?php echo $versionPortal; ?>"></script>
 <script src="jquery/jquery.min.js"></script>  
 <!-- <script src="jquery/jquery-3.2.1.min.js"></script>-->
@@ -453,6 +454,8 @@ $(function () {
 	CargaGridTarea('Tareas','grid_array');
 	
 	CargaGridHorasEnUnDia();
+
+	CargaGridTeletrabajo();
 	
 	Actualiza_Avisos();
 
@@ -605,8 +608,9 @@ $(function () {
 	//selecciono_sininiciar('visibilidad_tipo_7_2','2');
 });   
 
-
-
+</script>
+<script>
+	
 </script>
 <script src="js/comprobaciones_<?php echo curPageName(); ?>.js"> </script>
 <!--Script Generales!-->
@@ -899,6 +903,15 @@ $(function () {
 						<div id="horasunundia_grid"></div>
 					</div>
 					<!-- Pantalla de Horas en un dia!-->
+
+					<!-- Pantalla para teletrabajo!-->
+				    <div class="cuerpo-seccion" id="miseccionteletrabajo" style="display: none;">
+					    <div class="input-block" id="Imputar_teletrabajo">
+						<?php include "./teletrabajo/teletrabajo.php";	?>
+						   
+						</div>
+					</div>
+					<!-- Pantalla para teletrabajo!-->
 
 					<!-- ++ Pantalla de Masiva!-->
 					<div class="cuerpo-seccion" id="misecciondatosmasivo" style="display: none;">
