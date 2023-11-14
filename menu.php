@@ -629,7 +629,7 @@ $(function () {
 		<div class="content">
 			<div id="contenedor" class="contenedor">
 				<!-- Cabecera de login!-->
-				<div id="cabecera_titulo_tarea" class="cabecera_titulo_tarea" style=""></div>
+				<div id="cabecera_titulo_tarea" class="cabecera_titulo_tarea"></div>
 				<div id="cabecera_nueva_login" class="cabecera_nueva_login">
 					<div id="cabecera_nueva_login_izq" class="cabecera_nueva_login_izq">
 						<?php if($externo == ''){ ?><a href="#jqmenu"><span><img src="imagenes/menu-lateral3.png" height="30" /></span></a><?php }?>
