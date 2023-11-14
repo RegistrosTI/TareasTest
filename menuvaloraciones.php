@@ -117,9 +117,6 @@ switch($portal){
 		.plegalble{
 		overflow:hidden;	
 		}
-		.la-web{
-
-		}
 		.cabecera_div
 		{
 			border-style: solid; 
@@ -148,7 +145,6 @@ switch($portal){
 			display: block;
 			padding: 7px 8px;
 			text-decoration: none;
-			solid #bbb;
 			height: 30px;
 		}
 
@@ -186,9 +182,8 @@ switch($portal){
 		}
 		.tabla-popup
 		{
-			width: 330px; height: 180px
+			width: 330px; height: 180px;
 			font-size:12px;	
-			
 			margin:10px;		
 		}
 		.tool
